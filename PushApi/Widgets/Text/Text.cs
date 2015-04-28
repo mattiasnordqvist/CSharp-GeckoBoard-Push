@@ -16,5 +16,4 @@ namespace CSharpGeckoBoardPush.Widgets.Text
 
         public Data Data { get; set; }
     }
-
 }
