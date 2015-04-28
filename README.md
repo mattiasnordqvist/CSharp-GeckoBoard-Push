@@ -48,19 +48,19 @@ api.Push(new BrowserUsagePieChart(data));
 ## Contribute
 It is a hell of a task to create widget implementations for all the Gecko Board widget types. Grab one and help out? 
 
-WIDGET TYPES
-Custom Widget Types
-Bar Chart
-Bullet Graph
-Funnel
-Geck-o-Meter
-Highcharts
-Leaderboard
-Line Chart
-List
-Map
-Monitoring
-Number and Secondary Stat
-DONE: Pie Chart
-RAG
-DONE: Text
+###WIDGET TYPES
+Custom Widget Types  
+Bar Chart  
+Bullet Graph  
+Funnel  
+Geck-o-Meter  
+Highcharts  
+Leaderboard  
+Line Chart  
+List  
+Map  
+Monitoring  
+Number and Secondary Stat  
+~~Pie Chart~~  
+RAG  
+~~Text~~  
