@@ -10,7 +10,7 @@ public class BrowserUsagePieChart : PieChart
     {
         foreach (var browserUsage in browserUsages)
         {
-            Data.Item.Add(new Item { Label = browserUsage.Key, Value = browserUsage.Value });
+            Data.Item.Add(new Item(browserUsage.Key,browserUsage.Value));
         }
     }
 }
