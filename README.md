@@ -6,7 +6,7 @@ So you are displaying a Pie Chart showing browser usage statistics on your Gecko
 ```csharp
 public class BrowserUsagePieChart : PieChart
 {
-    public BrowserUsagePieChart(Dictionary<string, int> browserUsages) : base("my-pie-chart-widget-key")
+    public BrowserUsagePieChart(Dictionary<string, double> browserUsages) : base("my-pie-chart-widget-key")
     {
         foreach (var browserUsage in browserUsages)
         {
@@ -21,13 +21,13 @@ Replace the `my-pie-chart-widget-key` with the widget key tied to your specific 
 Let's pretend this data came from somewhere.
 
 ```csharp
-var data = new Dictionary<string, int>
+var data = new Dictionary<string, double>
 {
-    { "Chrome", 637 },
-    { "IE", 77 },
-    { "Firefox", 221 },
-    { "Safari",  39 },
-    { "Opera",  15 },                   
+    { "Chrome", 63.7 },
+    { "IE", 7.7 },
+    { "Firefox", 22.1 },
+    { "Safari",  3.9 },
+    { "Opera",  1.5 },                   
 };
 ```
 
