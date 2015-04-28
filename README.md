@@ -1,5 +1,12 @@
-# CSharp-GeckoBoard-Push
+# CSharp GeckoBoard Push
 A typesafe library for easy access to the GeckoBoard Push API using C#
+
+## Install
+
+To install Web Anchor, run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console)
+<p><code>PM&gt; Install-Package CSharpGeckoBoardPush</code></p>
+
+## Use
 
 So you are displaying a Pie Chart showing browser usage statistics on your Gecko Board? Let's create class for it.
 
