@@ -44,3 +44,6 @@ var api = new GeckoApiFactory().Create("your-api-key");
 
 api.Push(new BrowserUsagePieChart(data));
 ```
+
+## Contribute
+It is a hell of a task to create widget implementations for all the Gecko Board widget types. Grab one and help out? 
