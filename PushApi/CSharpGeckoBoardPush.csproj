@@ -40,6 +40,9 @@
     <Compile Include="IGeckoApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Factory\WidgetKeyTransformer.cs" />
+    <Compile Include="Widgets\GeckOMeter\Data.cs" />
+    <Compile Include="Widgets\GeckOMeter\GeckOMeter.cs" />
+    <Compile Include="Widgets\GeckOMeter\ValueContainer.cs" />
     <Compile Include="Widgets\PieChart\Data.cs" />
     <Compile Include="Widgets\PieChart\Item.cs" />
     <Compile Include="Widgets\PieChart\PieChart.cs" />
