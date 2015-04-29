@@ -25,6 +25,8 @@ public class BrowserUsagePieChart : PieChart
 
 Replace the `my-pie-chart-widget-key` with the widget key tied to your specific widget.
 
+Note that it is not necessary to define your own subclasses like this. Your could use the PieChart class as it is.
+
 Let's pretend this data came from somewhere.
 
 ```csharp
