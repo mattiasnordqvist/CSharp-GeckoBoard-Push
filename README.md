@@ -55,7 +55,7 @@ Custom Widget Types
 Bar Chart  
 Bullet Graph  
 Funnel  
-Geck-o-Meter  
+~~Geck-o-Meter~~  
 Highcharts  
 Leaderboard  
 Line Chart  
