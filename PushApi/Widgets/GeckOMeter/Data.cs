@@ -4,9 +4,9 @@ namespace CSharpGeckoBoardPush.Widgets.GeckOMeter
     {
         public Data(double value, double min, double max)
         {
-            this.Item = value;
-            this.Min = new ValueContainer(min);
-            this.Max = new ValueContainer(max);
+            Item = value;
+            Min = new ValueContainer(min);
+            Max = new ValueContainer(max);
         }
 
         public double Item { get; set; }

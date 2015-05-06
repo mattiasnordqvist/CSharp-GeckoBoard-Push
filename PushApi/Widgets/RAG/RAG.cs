@@ -1,13 +1,12 @@
-﻿namespace CSharpGeckoBoardPush.Widgets.Text
+﻿namespace CSharpGeckoBoardPush.Widgets.RAG
 {
-    public class Text : Widget
+    public class RAG : Widget
     {
-        public Text(string widgetKey)
+        public RAG(string widgetKey)
             : base(widgetKey)
         {
             Data = new Data();
         }
-
         public Data Data { get; set; }
     }
 }

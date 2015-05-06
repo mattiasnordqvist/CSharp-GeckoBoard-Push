@@ -13,10 +13,10 @@ namespace CSharpGeckoBoardPush.Factory
             var h = host ?? "https://push.geckoboard.com";
 
             var api = Api.For<IGeckoApi>(
-                h,
+                h, 
                 new HttpRequestFactory(
                     new ContentSerializer(
-                        new JsonSerializer { ContractResolver = new CamelCasePropertyNamesContractResolver() })),
+                        new JsonSerializer { ContractResolver = new CamelCasePropertyNamesContractResolver() })), 
                 configure: x =>
                     {
                     ((HttpRequestFactory)x.HttpRequestBuilder).DefaultParameterListTransformers.Add(new WidgetKeyTransformer());

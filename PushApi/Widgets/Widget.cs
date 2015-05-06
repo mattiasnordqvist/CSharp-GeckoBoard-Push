@@ -4,7 +4,7 @@
     {
         public Widget(string widgetKey)
         {
-            this.WidgetKey = widgetKey;
+            WidgetKey = widgetKey;
         }
 
         public string WidgetKey { get; set; }

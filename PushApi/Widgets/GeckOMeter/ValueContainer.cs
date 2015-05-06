@@ -4,7 +4,7 @@
     {
         public ValueContainer(double value)
         {
-            this.Value = value;
+            Value = value;
         }
 
         public double Value { get; set; }

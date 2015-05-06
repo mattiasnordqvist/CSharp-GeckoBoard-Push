@@ -46,6 +46,9 @@
     <Compile Include="Widgets\PieChart\Data.cs" />
     <Compile Include="Widgets\PieChart\Item.cs" />
     <Compile Include="Widgets\PieChart\PieChart.cs" />
+    <Compile Include="Widgets\RAG\Data.cs" />
+    <Compile Include="Widgets\RAG\Item.cs" />
+    <Compile Include="Widgets\RAG\RAG.cs" />
     <Compile Include="Widgets\Text\Data.cs" />
     <Compile Include="Widgets\Text\Item.cs" />
     <Compile Include="Widgets\Text\Text.cs" />

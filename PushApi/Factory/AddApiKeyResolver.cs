@@ -10,14 +10,14 @@ namespace CSharpGeckoBoardPush.Factory
 
         public AddApiKeyResolver(string apiKey)
         {
-            this._apiKey = apiKey;
+            _apiKey = apiKey;
         }
 
         public void Resolve(Parameter parameter)
         {
             if (parameter.ParameterType == ParameterType.Content)
             {
-                ((IDictionary<string, object>)parameter.Value).Add("api_key", this._apiKey);
+                ((IDictionary<string, object>)parameter.Value).Add("api_key", _apiKey);
                 ((IDictionary<string, object>)parameter.Value).Remove("WidgetKey");
             }
         }
