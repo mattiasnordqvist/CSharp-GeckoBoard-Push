@@ -64,5 +64,5 @@ Map
 Monitoring  
 Number and Secondary Stat  
 ~~Pie Chart~~  
-RAG  
+~~RAG~~  
 ~~Text~~  
