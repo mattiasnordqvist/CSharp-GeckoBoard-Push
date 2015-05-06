@@ -1,3 +1,8 @@
+using System;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
@@ -13,17 +18,48 @@ namespace CSharpGeckoBoardPush.Factory
             var h = host ?? "https://push.geckoboard.com";
 
             var api = Api.For<IGeckoApi>(
-                h, 
+                new HttpClient(new LoggingHandler(new HttpClientHandler())){BaseAddress = new Uri(h)},
                 new HttpRequestFactory(
                     new ContentSerializer(
                         new JsonSerializer { ContractResolver = new CamelCasePropertyNamesContractResolver() })), 
                 configure: x =>
                     {
                     ((HttpRequestFactory)x.HttpRequestBuilder).DefaultParameterListTransformers.Add(new WidgetKeyTransformer());
-                    ((HttpRequestFactory)x.HttpRequestBuilder).DefaultParameterResolvers.Add(new AddApiKeyResolver(apiKey));
+                    ((HttpRequestFactory)x.HttpRequestBuilder).DefaultParameterListTransformers.Add(new AddApiKeyResolver(apiKey));
                 });
 
             return api;
+        }
+    }
+
+    public class LoggingHandler : DelegatingHandler
+    {
+        public LoggingHandler(HttpMessageHandler innerHandler)
+            : base(innerHandler)
+        {
+        }
+
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            Console.WriteLine("Request:");
+            Console.WriteLine(request.ToString());
+            if (request.Content != null)
+            {
+                Console.WriteLine(await request.Content.ReadAsStringAsync());
+            }
+            Console.WriteLine();
+
+            HttpResponseMessage response = await base.SendAsync(request, cancellationToken);
+
+            Console.WriteLine("Response:");
+            Console.WriteLine(response.ToString());
+            if (response.Content != null)
+            {
+                Console.WriteLine(await response.Content.ReadAsStringAsync());
+            }
+            Console.WriteLine();
+
+            return response;
         }
     }
 }

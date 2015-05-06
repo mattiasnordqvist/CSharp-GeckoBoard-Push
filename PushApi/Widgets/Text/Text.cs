@@ -9,5 +9,10 @@
         }
 
         public Data Data { get; set; }
+
+        public override object CreateData()
+        {
+            return Data;
+        }
     }
 }

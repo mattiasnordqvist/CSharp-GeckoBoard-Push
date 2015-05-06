@@ -4,6 +4,7 @@ using System.Linq;
 using CSharpGeckoBoardPush.Widgets;
 
 using WebAnchor.RequestFactory;
+using WebAnchor.RequestFactory.Resolvers;
 
 namespace CSharpGeckoBoardPush.Factory
 {
@@ -13,10 +14,12 @@ namespace CSharpGeckoBoardPush.Factory
         {
             var param = parameters.Single(x => x.ParameterType == ParameterType.Content);
 
-            var value = ((Widget)param.ParameterValue).WidgetKey;
+            var widget = ((Widget)param.ParameterValue);
+            var value = widget.WidgetKey;
             var list = parameters.ToList();
             list.Add(new Parameter(null, value, ParameterType.Route) { Name = "widget-key" });
 
+            param.Value = new { Data = widget.CreateData() }.ToDictionary();
             return list;
         }
     }

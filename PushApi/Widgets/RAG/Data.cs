@@ -6,12 +6,10 @@ namespace CSharpGeckoBoardPush.Widgets.RAG
     {
         public Data()
         {
-            Item = new List<Item>();
-            //Type = "reverse";
-            
+            Item = new List<RagItem>();
         }
 
-        public List<Item> Item { get; set; }
+        public List<RagItem> Item { get; set; }
         public string Type { get; set; }
         
     }

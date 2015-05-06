@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 
 using WebAnchor.RequestFactory;
 
 namespace CSharpGeckoBoardPush.Factory
 {
-    public class AddApiKeyResolver : IParameterResolver
+    public class AddApiKeyResolver : IParameterListTransformer
     {
         private readonly string _apiKey;
 
@@ -20,6 +21,12 @@ namespace CSharpGeckoBoardPush.Factory
                 ((IDictionary<string, object>)parameter.Value).Add("api_key", _apiKey);
                 ((IDictionary<string, object>)parameter.Value).Remove("WidgetKey");
             }
+        }
+
+        public IEnumerable<Parameter> TransformParameters(IEnumerable<Parameter> parameters, ParameterTransformContext parameterTransformContext)
+        {
+            Resolve(parameters.Single(x => x.ParameterType == ParameterType.Content));
+            return parameters;
         }
     }
 }

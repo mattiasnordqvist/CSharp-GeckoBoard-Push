@@ -47,7 +47,7 @@
     <Compile Include="Widgets\PieChart\Item.cs" />
     <Compile Include="Widgets\PieChart\PieChart.cs" />
     <Compile Include="Widgets\RAG\Data.cs" />
-    <Compile Include="Widgets\RAG\Item.cs" />
+    <Compile Include="Widgets\RAG\RagItem.cs" />
     <Compile Include="Widgets\RAG\RAG.cs" />
     <Compile Include="Widgets\Text\Data.cs" />
     <Compile Include="Widgets\Text\Item.cs" />
@@ -69,8 +69,8 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebAnchor, Version=0.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebAnchor.0.2.2.0\lib\net45\WebAnchor.dll</HintPath>
+    <Reference Include="WebAnchor, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebAnchor.0.3.0.0\lib\net45\WebAnchor.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
