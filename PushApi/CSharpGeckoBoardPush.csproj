@@ -43,6 +43,9 @@
     <Compile Include="Widgets\GeckOMeter\Data.cs" />
     <Compile Include="Widgets\GeckOMeter\GeckOMeter.cs" />
     <Compile Include="Widgets\GeckOMeter\ValueContainer.cs" />
+    <Compile Include="Widgets\NumberAndSecondaryStat\Data.cs" />
+    <Compile Include="Widgets\NumberAndSecondaryStat\Item.cs" />
+    <Compile Include="Widgets\NumberAndSecondaryStat\NumberAndSecondaryStat.cs" />
     <Compile Include="Widgets\PieChart\Data.cs" />
     <Compile Include="Widgets\PieChart\Item.cs" />
     <Compile Include="Widgets\PieChart\PieChart.cs" />
