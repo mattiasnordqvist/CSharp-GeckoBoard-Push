@@ -1,5 +1,7 @@
 # GeckoBoard Push
-A typesafe library for easy access to the GeckoBoard Push API using C#
+A typesafe library for easy access to the GeckoBoard Push API using C#.
+
+It is actually very easy to fail when using the geckoboard api. The documentation is not completely clear on how some parameters should be used and also exposes disambiguos data structures. This repository aims to fix this. By using C#, we can force you inte creating correct requests by type-safeness, or in worst case, early throws of exceptions.
 
 ## Install
 
