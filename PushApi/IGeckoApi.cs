@@ -5,6 +5,8 @@ using CSharpGeckoBoardPush.Widgets;
 
 using WebAnchor.RequestFactory;
 using WebAnchor.RequestFactory.HttpAttributes;
+using WebAnchor.RequestFactory.Transformation.Transformers;
+using WebAnchor.RequestFactory.Transformation.Transformers.Default;
 
 namespace CSharpGeckoBoardPush
 {
@@ -12,6 +14,6 @@ namespace CSharpGeckoBoardPush
     public interface IGeckoApi
     {
         [Post("/{widget-key}/")]
-        Task<HttpResponseMessage> Push<T>([Content] T widget) where T : Widget;
+        Task<HttpResponseMessage> Push<T>([Content][AsDictionary] T widget) where T : Widget;
     }
 }

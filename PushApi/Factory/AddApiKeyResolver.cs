@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 using WebAnchor.RequestFactory;
+using WebAnchor.RequestFactory.Transformation;
 
 namespace CSharpGeckoBoardPush.Factory
 {
@@ -27,6 +29,10 @@ namespace CSharpGeckoBoardPush.Factory
         {
             Resolve(parameters.Single(x => x.ParameterType == ParameterType.Content));
             return parameters;
+        }
+
+        public void ValidateApi(Type type)
+        {
         }
     }
 }

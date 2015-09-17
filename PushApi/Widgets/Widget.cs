@@ -31,7 +31,7 @@ namespace CSharpGeckoBoardPush.Widgets
         {
             NullGuard(widgetKey, "widgetKey");
 
-            const string Regex = "^[0-9a-f]{6}-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$";
+            const string Regex = "^[0-9a-f]{5,6}-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$";
 
             if (!new Regex(Regex).IsMatch(widgetKey))
             {

@@ -37,6 +37,8 @@
     </Compile>
     <Compile Include="Factory\AddApiKeyResolver.cs" />
     <Compile Include="Factory\GeckoApiFactory.cs" />
+    <Compile Include="Factory\GeckoApiSettings.cs" />
+    <Compile Include="Factory\LoggingHandler.cs" />
     <Compile Include="IGeckoApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Factory\WidgetKeyTransformer.cs" />
@@ -62,8 +64,8 @@
       <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -72,12 +74,13 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebAnchor, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebAnchor.0.3.0.0\lib\net45\WebAnchor.dll</HintPath>
+    <Reference Include="WebAnchor, Version=1.0.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebAnchor.1.0.21\lib\net45\WebAnchor.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,10 +1,12 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 using CSharpGeckoBoardPush.Widgets;
 
 using WebAnchor.RequestFactory;
-using WebAnchor.RequestFactory.Resolvers;
+using WebAnchor.RequestFactory.Transformation;
+using WebAnchor.RequestFactory.Transformation.Transformers.Default;
 
 namespace CSharpGeckoBoardPush.Factory
 {
@@ -21,6 +23,10 @@ namespace CSharpGeckoBoardPush.Factory
 
             param.Value = new { Data = widget.CreateData() }.ToDictionary();
             return list;
+        }
+
+        public void ValidateApi(Type type)
+        {
         }
     }
 }
