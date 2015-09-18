@@ -20,6 +20,7 @@ namespace CSharpGeckoBoardPush.Factory
             {
                 Console.WriteLine(await request.Content.ReadAsStringAsync());
             }
+
             Console.WriteLine();
 
             HttpResponseMessage response = await base.SendAsync(request, cancellationToken);
@@ -30,6 +31,7 @@ namespace CSharpGeckoBoardPush.Factory
             {
                 Console.WriteLine(await response.Content.ReadAsStringAsync());
             }
+
             Console.WriteLine();
 
             return response;

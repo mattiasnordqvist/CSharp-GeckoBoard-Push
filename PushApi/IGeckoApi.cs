@@ -14,6 +14,6 @@ namespace CSharpGeckoBoardPush
     public interface IGeckoApi
     {
         [Post("/{widget-key}/")]
-        Task<HttpResponseMessage> Push<T>([Content][AsDictionary] T widget) where T : Widget;
+        Task<HttpResponseMessage> Push<T>([Content][AsDictionary] T widget) where T : WidgetBase;
     }
 }

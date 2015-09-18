@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace CSharpGeckoBoardPush.Widgets
 {
-    public abstract class Widget
+    public abstract class WidgetBase
     {
-        protected Widget(string widgetKey)
+        protected WidgetBase(string widgetKey)
         {
             WidgetKeyGuard(widgetKey);
             WidgetKey = widgetKey;

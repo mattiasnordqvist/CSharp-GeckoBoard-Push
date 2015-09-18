@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -7,7 +6,6 @@ using Newtonsoft.Json.Serialization;
 using WebAnchor;
 using WebAnchor.RequestFactory;
 using WebAnchor.RequestFactory.Transformation;
-using WebAnchor.RequestFactory.Transformation.Transformers.Default;
 
 namespace CSharpGeckoBoardPush.Factory
 {
@@ -32,6 +30,5 @@ namespace CSharpGeckoBoardPush.Factory
             defaultList.Add(new AddApiKeyResolver(_apiKey));
             return defaultList;
         }
-
     }
 }
