@@ -1,5 +1,5 @@
 # GeckoBoard Push
-Some code for easy access to the GeckoBoard Push API using C#.
+Some code for easy access of the GeckoBoard Push API using C#.
 
 ## Install
 
