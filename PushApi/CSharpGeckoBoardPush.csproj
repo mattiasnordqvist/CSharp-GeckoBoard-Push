@@ -60,8 +60,8 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebAnchor, Version=2.1.35.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebAnchor.2.1.35\lib\net45\WebAnchor.dll</HintPath>
+    <Reference Include="WebAnchor, Version=2.3.64.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebAnchor.2.3.64\lib\net45\WebAnchor.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
