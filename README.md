@@ -12,7 +12,19 @@ To install Web Anchor, run the following command in the [Package Manager Console
 
 var api = new GeckoApiFactory().Create("your-api-key");
 
-api.Push(new Widget("widgey-key", new { /* data, see doc */ }));
+// Number and secondary stat. See geckoboard documentation for alternatives 
+var data = new {
+  item = new object[]{
+    new {
+      value = 5723,
+      text = "Total paying customers"
+    }
+  }
+};
+
+api.Push(new Widget("widgey-key", data));
+
+
 ```
 
 Geckoboard custom widgets documentation: https://developer.geckoboard.com/
