@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("PushApi")]
@@ -8,3 +9,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 [assembly: Guid("95ea2be4-7526-4f62-8245-c95924cf00d8")]
+[assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]

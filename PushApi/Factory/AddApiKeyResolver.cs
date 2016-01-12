@@ -7,7 +7,7 @@ using WebAnchor.RequestFactory.Transformation;
 
 namespace CSharpGeckoBoardPush.Factory
 {
-    public class AddApiKeyResolver : IParameterListTransformer
+    internal class AddApiKeyResolver : IParameterListTransformer
     {
         private readonly string _apiKey;
 
