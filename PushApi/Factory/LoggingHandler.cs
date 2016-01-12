@@ -23,7 +23,7 @@ namespace CSharpGeckoBoardPush.Factory
 
             Console.WriteLine();
 
-            HttpResponseMessage response = await base.SendAsync(request, cancellationToken);
+            var response = await base.SendAsync(request, cancellationToken);
 
             Console.WriteLine("Response:");
             Console.WriteLine(response.ToString());

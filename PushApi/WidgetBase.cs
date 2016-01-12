@@ -32,13 +32,13 @@ namespace CSharpGeckoBoardPush.Widgets
 
         private void WidgetKeyGuard(string widgetKey)
         {
-            NullGuard(widgetKey, "widgetKey");
+            NullGuard(widgetKey, nameof(widgetKey));
 
             const string Regex = "^[0-9a-f]{5,6}-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$";
 
             if (!new Regex(Regex).IsMatch(widgetKey))
             {
-                throw new ArgumentException("widgetKey has wrong format", "widgetKey");
+                throw new ArgumentException($"{nameof(widgetKey)} has wrong format", nameof(widgetKey));
             }
         }
     }
