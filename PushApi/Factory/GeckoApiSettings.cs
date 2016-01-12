@@ -28,7 +28,7 @@ namespace CSharpGeckoBoardPush.Factory
 
         private IList<IParameterListTransformer> CreateParameterListTransformers()
         {
-            var defaultList = base.ParameterListTransformers;
+            var defaultList = ParameterListTransformers;
             defaultList.Add(new WidgetKeyTransformer());
             defaultList.Add(new AddApiKeyResolver(_apiKey));
             return defaultList;

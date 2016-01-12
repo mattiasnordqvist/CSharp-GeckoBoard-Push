@@ -11,6 +11,10 @@ namespace CSharpGeckoBoardPush.Widgets
             WidgetKey = widgetKey;
         }
 
+        public string WidgetKey { get; set; }
+
+        public abstract object CreateData();
+
         protected void NullGuard(object o, string paramName = null)
         {
             if (o != null)
@@ -37,9 +41,5 @@ namespace CSharpGeckoBoardPush.Widgets
                 throw new ArgumentException("widgetKey has wrong format", "widgetKey");
             }
         }
-
-        public string WidgetKey { get; set; }
-
-        public abstract object CreateData();
     }
 }

@@ -16,10 +16,10 @@ namespace CSharpGeckoBoardPush.Factory
         {
             var param = parameters.Single(x => x.ParameterType == ParameterType.Content);
 
-            var widget = ((WidgetBase)param.ParameterValue);
+            var widget = (WidgetBase)param.ParameterValue;
             var value = widget.WidgetKey;
             var list = parameters.ToList();
-            list.Add(new Parameter(null, value, ParameterType.Route) { Name = "widget-key", Value = value});
+            list.Add(new Parameter(null, value, ParameterType.Route) { Name = "widget-key", Value = value });
 
             param.Value = new { Data = widget.CreateData() }.ToDictionary();
             return list;
