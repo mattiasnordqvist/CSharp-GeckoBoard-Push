@@ -10,7 +10,7 @@ using WebAnchor.RequestFactory.Transformation;
 
 namespace CSharpGeckoBoardPush.Factory
 {
-    public class GeckoApiSettings : ApiSettings
+    internal class GeckoApiSettings : ApiSettings
     {
         private readonly string _apiKey;
 
