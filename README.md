@@ -11,18 +11,21 @@ Right now I'm not sure which one is correct... will look into it anytime soon.
 ## Use
 
 ```csharp
-using(var geckoboard = new Geckoboard("your-api-key")) {
+using(var geckoboard = new Geckoboard("your-api-key")) 
+{
     var myWidget = geckoboard.GetWidget("widget-key");
     
     // Number and secondary stat. See geckoboard documentation for alternatives 
     var data = new
     {
-        item = new object[]{
-            new {
-              value = 5723,
-              text = "Total paying customers"
+        item = new object[]
+        {
+            new
+            {
+                value = 5723,
+                text = "Total paying customers"
             }
-          }
+        }
     };
     
     await myWidget.Push(data);
