@@ -40,6 +40,7 @@
     <Compile Include="Geckoboard.cs" />
     <Compile Include="Factory\GeckoApiSettings.cs" />
     <Compile Include="IGeckoboard.cs" />
+    <Compile Include="IWidget.cs" />
     <Compile Include="IWidgetDataFactory.cs" />
     <Compile Include="Factory\IGeckoApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

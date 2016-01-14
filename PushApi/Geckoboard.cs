@@ -29,7 +29,7 @@ namespace CSharpGeckoBoardPush
         /// </summary>
         /// <param name="widgetKey">The widget key can be found in the edit view of your widget at geckoboard.com. It usually looks something like 168149-9e42d098-8f93-4c3f-ad7e-e4480e333b09</param>
         /// <returns></returns>
-        public Widget<DefaultWidgetDataFactory, object> GetWidget(string widgetKey)
+        public IWidget<DefaultWidgetDataFactory, object> GetWidget(string widgetKey)
         {
             return GetWidget<DefaultWidgetDataFactory, object>(widgetKey, new DefaultWidgetDataFactory());
         }
@@ -44,7 +44,7 @@ namespace CSharpGeckoBoardPush
         /// <param name="widgetKey">The widget key can be found in the edit view of your widget at geckoboard.com. It usually looks something like 168149-9e42d098-8f93-4c3f-ad7e-e4480e333b09</param>
         /// <param name="widgetDataFactory">An instance of TFactory</param>
         /// <returns></returns>
-        public Widget<TFactory, TInput> GetWidget<TFactory, TInput>(string widgetKey, TFactory widgetDataFactory) where TFactory : IWidgetDataFactory<TInput>
+        public IWidget<TFactory, TInput> GetWidget<TFactory, TInput>(string widgetKey, TFactory widgetDataFactory) where TFactory : IWidgetDataFactory<TInput>
         {
             return new Widget<TFactory, TInput>(widgetKey, _api, widgetDataFactory);
         }
@@ -56,7 +56,7 @@ namespace CSharpGeckoBoardPush
         /// <typeparam name="TInput">The type of the input your TFactory takes</typeparam>
         /// <param name="widgetKey">The widget key can be found in the edit view of your widget at geckoboard.com. It usually looks something like 168149-9e42d098-8f93-4c3f-ad7e-e4480e333b09</param>
         /// <returns></returns>
-        public Widget<TFactory, TInput> GetWidget<TFactory, TInput>(string widgetKey) where TFactory : IWidgetDataFactory<TInput>, new()
+        public IWidget<TFactory, TInput> GetWidget<TFactory, TInput>(string widgetKey) where TFactory : IWidgetDataFactory<TInput>, new()
         {
             return new Widget<TFactory, TInput>(widgetKey, _api, new TFactory());
         }
