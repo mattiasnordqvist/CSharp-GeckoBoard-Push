@@ -12,7 +12,7 @@ namespace CSharpGeckoBoardPush
     /// </summary>
     /// <typeparam name="TFactory">The type responsible for creating data understood by Geckoboard from a TInput</typeparam>
     /// <typeparam name="TInput">The type of the input your TFactory takes.</typeparam>
-    public class Widget<TFactory, TInput> : IWidget<TFactory, TInput> where TFactory : IWidgetDataFactory<TInput>
+    public class Widget<TFactory, TInput> : IWidget<TInput> where TFactory : IWidgetDataFactory<TInput>
     {
         private readonly IGeckoApi _api;
 

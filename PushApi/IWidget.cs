@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace CSharpGeckoBoardPush
 {
-    public interface IWidget<TFactory, in TInput>
+    public interface IWidget<in TInput>
     {
         Task<HttpResponseMessage> Push(TInput data);
     }
