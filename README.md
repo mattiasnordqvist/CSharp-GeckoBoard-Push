@@ -11,23 +11,22 @@ Right now I'm not sure which one is correct... will look into it anytime soon.
 ## Use
 
 ```csharp
-
-var geckoboard = new Geckoboard("your-api-key");
-var myWidget = geckoboard.GetWidget("widget-key");
-
-// Number and secondary stat. See geckoboard documentation for alternatives 
-var data = new
-{
-    item = new object[]{
-        new {
-          value = 5723,
-          text = "Total paying customers"
-        }
-      }
-};
-
-await myWidget.Push(data);
-
+using(var geckoboard = new Geckoboard("your-api-key")) {
+    var myWidget = geckoboard.GetWidget("widget-key");
+    
+    // Number and secondary stat. See geckoboard documentation for alternatives 
+    var data = new
+    {
+        item = new object[]{
+            new {
+              value = 5723,
+              text = "Total paying customers"
+            }
+          }
+    };
+    
+    await myWidget.Push(data);
+}
 ```
 
 Geckoboard custom widgets documentation: https://developer.geckoboard.com/
