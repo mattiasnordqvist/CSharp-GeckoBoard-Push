@@ -12,20 +12,21 @@ Right now I'm not sure which one is correct... will look into it anytime soon.
 
 ```csharp
 
-var api = new GeckoApiFactory().Create("your-api-key");
+var geckoboard = new Geckoboard("your-api-key");
+var myWidget = geckoboard.GetWidget("widget-key");
 
 // Number and secondary stat. See geckoboard documentation for alternatives 
-var data = new {
-  item = new object[]{
-    new {
-      value = 5723,
-      text = "Total paying customers"
-    }
-  }
+var data = new
+{
+    item = new object[]{
+        new {
+          value = 5723,
+          text = "Total paying customers"
+        }
+      }
 };
 
-api.Push(new Widget("widgey-key", data));
-
+await myWidget.Push(data);
 
 ```
 
