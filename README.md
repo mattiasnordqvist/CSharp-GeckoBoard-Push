@@ -4,9 +4,7 @@ Some code for easy access of the GeckoBoard Push API using C#.
 ## Install
 
 To install  GeckoBoard Push, run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console)
-<p><code>PM&gt; Install-Package PushApi</code></p> or maybe <p><code>PM&gt; Install-Package CSharpGeckoBoardPush</code></p>
-
-Right now I'm not sure which one is correct... will look into it anytime soon.
+<p><code>PM&gt; Install-Package CSharpGeckoBoardPush</code></p>
 
 ## Use
 
